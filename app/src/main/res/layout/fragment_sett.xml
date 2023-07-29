@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/yellow"
+        android:id="@+id/settings_toolbar"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="My Smart Home"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textAppearance="@style/text_appearance"
+                />
+
+
+
+        </LinearLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/settings_toolbar">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="User Settings"
+                android:gravity="start|center"
+                android:textSize="20sp"
+                android:background="@color/bg"
+                android:paddingStart="10dp"
+                android:id="@+id/user_settings_textview">
+
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/below_first_textview"
+                >
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:contentDescription="account holder profile picture"
+                    android:src="@drawable/baseline_account_circle_24">
+
+                </ImageView>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/email_and_name_container">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Martin Kalema"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        >
+
+                    </TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="kalema@gmail.com">
+
+                    </TextView>
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Home Settings"
+                android:gravity="start|center"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:background="@color/bg"
+                android:paddingStart="10dp"
+                android:id="@+id/home_settings_textview">
+
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:id="@+id/below_home_settings"
+                >
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:contentDescription="account holder profile picture"
+                    android:src="@drawable/baseline_person_24">
+
+                </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Accounts &amp; Hubs"
+                        android:textSize="20sp"
+                        android:layout_marginStart="20dp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        >
+
+                    </TextView>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider8"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:id="@+id/below_accounts"
+                >
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:contentDescription="account holder profile picture"
+                    android:src="@drawable/baseline_supervisor_account_24">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Clients"
+                    android:textSize="20sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    >
+
+                </TextView>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider9"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="?android:attr/listDivider" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/below_clients"
+                android:layout_marginTop="10dp"
+                >
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:contentDescription="account holder profile picture"
+                    android:src="@drawable/baseline_location_on_24">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Locations"
+                    android:textSize="20sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    >
+
+                </TextView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Voice"
+                android:gravity="start|center"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:background="@color/bg"
+                android:paddingStart="10dp"
+                android:id="@+id/voice_textview">
+
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/below_voice"
+                android:layout_marginTop="10dp"
+                >
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:contentDescription="account holder profile picture"
+                    android:src="@drawable/voice"
+                    app:tint="@color/yellow">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Voice Assistants"
+                    android:textSize="20sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    >
+
+                </TextView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="App Permissions"
+                android:gravity="start|center"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:background="@color/bg"
+                android:paddingStart="10dp"
+                android:id="@+id/permissions_textview">
+
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/below_app_permissions"
+                android:layout_marginTop="10dp"
+                >
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:contentDescription="account holder profile picture"
+                    android:src="@drawable/baseline_settings_24">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notifications &amp; Permissions"
+                    android:textSize="20sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    >
+
+                </TextView>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

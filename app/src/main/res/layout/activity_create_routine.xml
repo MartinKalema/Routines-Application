@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateRoutine"
+    android:background="#B4E6E5E5"
+    android:id="@+id/container_one">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/yellow"
+        android:id="@+id/create_routine_toolbar"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_close_24"
+                android:layout_gravity="start|center"
+                android:layout_marginEnd="60dp"
+                android:id="@+id/cancel_button">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="Create a Routine"
+                android:typeface="sans"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="100dp"
+                />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/save_icon"
+                android:src="@drawable/baseline_check_24">
+
+            </ImageView>
+
+
+
+        </LinearLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/container_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/create_routine_toolbar">
+        <TextView
+            android:id="@+id/invisible_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Routine Name"
+            android:textSize="15sp"
+            android:visibility="invisible"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/enter_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+           android:layout_marginEnd="20dp"
+            android:layout_marginStart="10dp"
+            android:hint="Routine name"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:inputType="text"
+            android:backgroundTint="@color/black"
+            >
+
+        </EditText>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="When"
+            android:textSize="24sp"
+            android:paddingStart="10dp">
+
+        </TextView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/parent_container"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="Want this routine to run automatically? Add an event below"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:background="#D3D3D3"
+                android:id="@+id/visible_layout"
+                >
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center|start"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:id="@+id/invisible_layout">
+            <ImageView
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:contentDescription="clock"
+                android:paddingStart="10dp"
+                android:src="@drawable/baseline_access_time_filled_24"
+                >
+
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="20dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Date &amp; Time"
+                    android:textSize="18sp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="The time is "
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:id="@+id/show_time">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/baseline_settings_24"
+                android:layout_marginStart="50dp">
+
+            </ImageView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:paddingEnd="20dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Add Event"
+                android:gravity="start|center"
+                android:layout_marginEnd="20dp"
+                android:textSize="24sp">
+
+            </TextView>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/add_event"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:backgroundTint="@color/blue"
+                android:contentDescription="favorites btn"
+                android:src="@drawable/baseline_add_24"
+                app:fabSize="auto"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:maxImageSize="30sp"
+                app:tint="@color/white" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Run these actions"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"
+            android:paddingStart="15dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/visible_textview_2"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="No actions. Tap below to add one."
+            android:textSize="20sp"
+            android:gravity="center"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:background="#D3D3D3">
+
+        </TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|start"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:id="@+id/invisible_layout2">
+            <ImageView
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:contentDescription="clock"
+                android:paddingStart="10dp"
+                android:src="@drawable/baseline_chat_bubble_24"
+                >
+
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="20dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Notifications"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Send Notification "
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:id="@+id/show_notification">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/baseline_settings_24"
+                android:layout_marginStart="50dp">
+
+            </ImageView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:paddingEnd="20dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Add Action"
+                android:gravity="start|center"
+                android:layout_marginEnd="20dp"
+                android:textSize="24sp">
+
+            </TextView>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/add_action"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:backgroundTint="@color/blue"
+                android:contentDescription="Add action btn"
+                android:src="@drawable/baseline_add_24"
+                app:fabSize="auto"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:maxImageSize="30sp"
+                app:tint="@color/white" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="But only if"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"
+            android:paddingStart="15dp">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Add an event before adding conditions."
+            android:textSize="20sp"
+            android:gravity="center"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:background="#D3D3D3"
+            android:id="@+id/visible_textview_3">
+
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Want this routine to only run sometimes? Add a condition below"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:background="#D3D3D3"
+            android:id="@+id/invisible_textview2"
+            android:visibility="gone"
+            >
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_condition_layout"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:visibility="invisible"
+            android:paddingEnd="20dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Add Condition"
+                android:gravity="start|center"
+                android:layout_marginEnd="20dp"
+                android:textSize="24sp">
+
+            </TextView>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/add_condition"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:backgroundTint="@color/blue"
+                android:contentDescription="Add action btn"
+                android:src="@drawable/baseline_add_24"
+                app:fabSize="auto"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:maxImageSize="30sp"
+                app:tint="@color/white" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

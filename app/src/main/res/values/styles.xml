@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BoldText">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BlueAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/blue</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/BlueAlertDialogButtonStyle</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/BlueAlertDialogButtonStyle</item>
+    </style>
+
+    <style name="BlueAlertDialogButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+</resources>
