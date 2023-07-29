@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FavoritesFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/yellow"
+        android:id="@+id/favorite_toolbar"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="My Smart Home"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textAppearance="@style/text_appearance"
+                android:layout_marginStart="80dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:clickable="true"
+                android:contentDescription="create btn"
+                android:src="@drawable/create">
+
+            </ImageView>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Favorites"
+        android:textSize="20sp"
+        android:background="@color/bg"
+        android:paddingStart="10dp"
+        android:paddingTop="15dp">
+
+    </TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="630dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/favoritesRecycler"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionBtn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:backgroundTint="@color/blue"
+        android:src="@drawable/baseline_add_24"
+        app:fabSize="auto"
+        android:layout_marginEnd="15dp"
+        app:maxImageSize="30sp"
+        android:contentDescription="favorites btn2"
+        app:tint="@color/white"
+        />
+
+
+</LinearLayout>

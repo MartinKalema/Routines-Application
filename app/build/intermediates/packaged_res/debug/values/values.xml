@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#E7E3E3</color>
+    <color name="black">#FF000000</color>
+    <color name="blue">#2196F3</color>
+    <color name="dark_yellow">#A59619</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#FFEB3B</color>
+    <string name="app_name">Smart Home App</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="time_is">The time is</string>
+    <style name="BlueAlertDialogButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/blue</item>
+    </style>
+    <style name="BlueAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/blue</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/BlueAlertDialogButtonStyle</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/BlueAlertDialogButtonStyle</item>
+    </style>
+    <style name="BoldText">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="Theme.Demo" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        
+        <item name="colorPrimary">@color/yellow</item>
+        <item name="colorPrimaryVariant">@color/dark_yellow</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        
+    </style>
+    <style name="text_appearance" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
+        <item name="fontFamily">@font/khand_semibold</item>
+    </style>
+</resources>
