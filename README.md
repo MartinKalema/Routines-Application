@@ -9,5 +9,5 @@ The Routines App is a versatile and user-friendly tool designed to enhance your 
 
 ## Installation
 ```
-git clone
-```# Routines Application
+git clone https://github.com/MartinKalema/Routines-Application
+```
